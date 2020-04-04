@@ -2,6 +2,17 @@ import 'regenerator-runtime';
 import { css, html, LitElement } from 'lit-element';
 
 class ButtonToTop extends LitElement {
+  constructor() {
+    super();
+    this.iconCode = 8593;
+  }
+
+  static get properties() {
+    return {
+      iconCode: { type: String },
+    };
+  }
+
   static get styles() {
     return css`
       .Button {
@@ -70,6 +81,8 @@ class ButtonToTop extends LitElement {
   }
 
   render() {
+    const hexIconCode = String.fromCharCode(this.iconCode);
+
     return html`
       <button
         class="Button"
@@ -77,7 +90,7 @@ class ButtonToTop extends LitElement {
         type="button"
         @click=${() => this.backToTop()}
       >
-        <span class="Icon">&#8657;</span>
+        <span class="Icon">${hexIconCode}</span>
       </button>
     `;
   }

@@ -4,12 +4,12 @@ import { css, html, LitElement } from 'lit-element';
 class ButtonToTop extends LitElement {
   constructor() {
     super();
-    this.iconCode = 8593;
+    this['icon-code'] = 8593;
   }
 
   static get properties() {
     return {
-      iconCode: { type: String },
+      'icon-code': { type: String },
     };
   }
 
@@ -81,7 +81,7 @@ class ButtonToTop extends LitElement {
   }
 
   render() {
-    const hexIconCode = String.fromCharCode(this.iconCode);
+    const hexIconCode = String.fromCharCode(this['icon-code']);
 
     return html`
       <button

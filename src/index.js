@@ -4,11 +4,13 @@ import { css, html, LitElement } from 'lit-element';
 class ButtonToTop extends LitElement {
   constructor() {
     super();
+    this.distance = 300;
     this['icon-code'] = 8593;
   }
 
   static get properties() {
     return {
+      distance: { type: Number },
       'icon-code': { type: String },
     };
   }
@@ -60,7 +62,10 @@ class ButtonToTop extends LitElement {
       const { body, documentElement } = document;
       const button = this.shadowRoot.getElementById('BtnBackToTop');
 
-      if (body.scrollTop > 300 || documentElement.scrollTop > 300) {
+      if (
+        body.scrollTop > this.distance ||
+        documentElement.scrollTop > this.distance
+      ) {
         button.style.display = 'block';
       } else {
         button.style.display = 'none';

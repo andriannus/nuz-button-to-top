@@ -48,8 +48,8 @@ class ButtonToTop extends LitElement {
 
     const selectedTheme = themeList.find((theme) => theme === this.theme);
     const buttonClassName = selectedTheme
-      ? `Button-${selectedTheme}`
-      : `Button-${THEME.primary}`;
+      ? `Button--${selectedTheme}`
+      : `Button--${THEME.primary}`;
 
     return { [buttonClassName]: true };
   }

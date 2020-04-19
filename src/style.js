@@ -29,37 +29,37 @@ export const buttonStyles = css`
     margin-right: calc(-0.375em - 1px);
   }
 
-  .Button-danger {
+  .Button--danger {
     background-color: #b71c1c;
     color: #f5f5f5;
   }
 
-  .Button-dark {
+  .Button--dark {
     background-color: #212121;
     color: #f5f5f5;
   }
 
-  .Button-info {
+  .Button--info {
     background-color: #40c4ff;
     color: #f5f5f5;
   }
 
-  .Button-light {
+  .Button--light {
     background-color: #f5f5f5;
     color: #212121;
   }
 
-  .Button-primary {
+  .Button--primary {
     background-color: #263238;
     color: #f5f5f5;
   }
 
-  .Button-success {
+  .Button--success {
     background-color: #43a047;
     color: #f5f5f5;
   }
 
-  .Button-warning {
+  .Button--warning {
     background-color: #fbc02d;
     color: #f5f5f5;
   }

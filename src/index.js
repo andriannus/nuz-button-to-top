@@ -1,5 +1,5 @@
 import 'regenerator-runtime';
-import { css, html, LitElement } from 'lit-element';
+import { html, LitElement } from 'lit-element';
 import { classMap } from 'lit-html/directives/class-map';
 
 import { buttonStyles, iconStyles } from '@/style';
@@ -40,9 +40,9 @@ class ButtonToTop extends LitElement {
         body.scrollTop > this.distance ||
         documentElement.scrollTop > this.distance
       ) {
-        button.style.display = 'block';
+        button.classList.remove('Button--invisible');
       } else {
-        button.style.display = 'none';
+        button.classList.add('Button--invisible');
       }
     };
   }
@@ -81,7 +81,7 @@ class ButtonToTop extends LitElement {
 
     return html`
       <button
-        class="Button ${classMap(this.getButtonClass())}"
+        class="Button Button--invisible ${classMap(this.getButtonClass())}"
         id="BtnBackToTop"
         type="button"
         @click=${() => this.backToTop()}

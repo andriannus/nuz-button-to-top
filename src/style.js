@@ -6,13 +6,15 @@ export const buttonStyles = css`
     border-radius: 4px;
     bottom: 30px;
     cursor: pointer;
-    display: none;
     font-size: 1.25rem;
     line-height: 1.5;
+    opacity: 1;
+    outline: none;
     padding: calc(0.375em - 1px) 0.75em;
     position: fixed;
     right: 30px;
     text-align: center;
+    transition: visible 0.33s linear, opacity 0.33s linear;
   }
 
   .Button:hover {
@@ -70,6 +72,13 @@ export const buttonStyles = css`
 
   .Button--rounded {
     border-radius: 50%;
+  }
+
+  .Button--invisible {
+    opacity: 0;
+    pointer-events: none;
+    transition: visible 0.33s linear, opacity 0.33s linear;
+    visible: hidden;
   }
 `;
 

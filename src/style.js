@@ -63,6 +63,14 @@ export const buttonStyles = css`
     background-color: #fbc02d;
     color: #f5f5f5;
   }
+
+  .Button--flat {
+    border-radius: 0;
+  }
+
+  .Button--rounded {
+    border-radius: 50%;
+  }
 `;
 
 export const iconStyles = css`

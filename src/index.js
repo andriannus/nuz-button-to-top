@@ -9,14 +9,18 @@ class ButtonToTop extends LitElement {
   constructor() {
     super();
     this.distance = DISTANCE;
+    this.flat = false;
     this['icon-code'] = ICON_CODE;
+    this.rounded = false;
     this.theme = THEME.primary;
   }
 
   static get properties() {
     return {
       distance: { type: Number },
+      flat: { type: Boolean },
       'icon-code': { type: String },
+      rounded: { type: Boolean },
       theme: { type: String },
     };
   }
@@ -44,14 +48,20 @@ class ButtonToTop extends LitElement {
   }
 
   getButtonClass() {
+    const buttonFlat = 'Button--flat';
+    const buttonRounded = 'Button--rounded';
     const themeList = Object.values(THEME);
 
     const selectedTheme = themeList.find((theme) => theme === this.theme);
-    const buttonClassName = selectedTheme
+    const buttonTheme = selectedTheme
       ? `Button--${selectedTheme}`
       : `Button--${THEME.primary}`;
 
-    return { [buttonClassName]: true };
+    return {
+      [buttonFlat]: this.flat,
+      [buttonRounded]: this.rounded,
+      [buttonTheme]: true,
+    };
   }
 
   backToTop() {

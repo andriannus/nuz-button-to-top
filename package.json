@@ -29,6 +29,7 @@
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-prettier": "^3.1.2",
     "lit-element": "^2.3.1",
+    "lit-html": "^1.2.1",
     "standard-version": "^7.1.0",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11",

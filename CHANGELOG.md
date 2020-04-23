@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.4](https://github.com/andriannus/nuz-button-to-top/compare/v0.0.3...v0.0.4) (2020-04-23)
+
+
+### Others
+
+* fix typo on README ([903b457](https://github.com/andriannus/nuz-button-to-top/commit/903b45760df1d8deeb8b49df271011257ab8cf60))
+
 ### [0.0.3](https://github.com/andriannus/nuz-button-to-top/compare/v0.0.2...v0.0.3) (2020-04-23)
 
 
